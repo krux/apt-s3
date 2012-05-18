@@ -10,9 +10,9 @@ Documenter: Susan Potter (@mbbx6spp on GH)
 
 ## Building
 
-Before building this project on Ubuntu (tested on 11.10) you will need to install the following packages:
+Before building this project on Ubuntu (tested on 11.10 and 12.04) you will need to install the following packages:
 
-    [sudo] apt-get install libapt-pkg-dev libcurl4-openssl-dev
+    [sudo] apt-get install libapt-pkg-dev libcurl4-openssl-dev make g++
 
 To build this project you simply run `make`. It will produce a binary named `s3` under the `src/` dir.
 
@@ -27,6 +27,10 @@ Finally, this is how you add it to the /etc/apt/sources.list file if you want yo
 otherwise leave off the credentials and it will draw them from the environment variables `AWS_ACCESS_KEY_ID` and `AWS_SECRET_KEY_ID`.
 
 Simply upload all of your .deb packages and Packages.gz file into the s3 bucket you chose with the file key mapping that matches the file system layout.
+
+If your S3 bucket is in another region, and you are getting "301 Moved Permanently" warnings, add the region to the URL. Example:
+  
+    deb s3://AWS_ACCESS_ID:[AWS_SECRET_KEY_IN_BRACKETS]@s3-us-west-1.amazonaws.com/BUCKETNAME precise main
 
 ## TODO
 
