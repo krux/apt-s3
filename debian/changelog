@@ -1,3 +1,9 @@
+apt-transport-s3 (1.0ubuntu2) lucid; urgency=low
+
+  * Automated changelog for build jenkins-apt-s3-17
+
+ -- Krux Jenkins <ops@krxd.net>  Fri, 13 Jul 2012 00:50:52 +0000
+
 apt-transport-s3 (1.0ubuntu1) lucid; urgency=low
 
   * Working around stupid amazon s3 behaviour with filenames
